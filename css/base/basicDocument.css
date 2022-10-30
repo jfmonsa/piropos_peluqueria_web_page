@@ -1,0 +1,100 @@
+/*================================= BASE =================================================== */
+/* Alternative box model--------- */
+html {
+   box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+   box-sizing: inherit;
+   margin: 0;
+   padding: 0;
+}
+/* Alternative box model--------- */
+* {
+   max-width: 100vw;
+}
+img {
+   max-width: 100%;
+   display: block;
+}
+/* Tipografias */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+footer,
+header {
+   font-family: var(--nunito-ffamily);
+}
+main p,
+nav p {
+   font-family: var(--merry-ffamily);
+}
+.icon {
+   font-family: var(--anicons-ffamily);
+}
+/* colores */
+nav p,
+header,
+footer,
+.icon,
+.logo__title,
+.subheader {
+   color: var(--luminus-white);
+}
+:is(.btn, .logo):hover,
+footer :any-link {
+   color: var(--luminus-dark);
+}
+body {
+   background: var(--bg-body);
+}
+p:not(.custom-p-fize) {
+   font-size: var(--p-f-size) !important;
+   /* The !impt is set to rewrite the default user declarations */
+}
+main.m ::selection {
+   background-color: var(--main-color-min-alpha);
+   color: var(--bg-footer);
+}
+/* link*/
+.icon,
+a:not(a.normalLink:is(:any-link, :link), a.normalLinkHover:is(:any-link, :link):hover) {
+   text-decoration: none;
+}
+/* ============================================= CUSTOM SCROLLBAR ============================================= */
+@supports selector(::-webkit-scrollbar) and selector(::-webkit-scrollbar-thumb) and
+   selector(::-webkit-scrollbar-track) {
+   *::-webkit-scrollbar {
+      width: 8px;
+   }
+   /* Estilos barra (thumb) de scroll */
+   *::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+   }
+
+   *::-webkit-scrollbar-thumb:active {
+      background-color: var(--bg-bayond-scroll);
+   }
+
+   *::-webkit-scrollbar-thumb:hover {
+      background: #b3b3b3;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+   }
+
+   /* Estilos track de scroll */
+   *::-webkit-scrollbar-track {
+      background: #e1e1e1;
+      border-radius: 4px;
+   }
+
+   *::-webkit-scrollbar-track:hover,
+   *::-webkit-scrollbar-track:active {
+      background: #d4d4d4;
+   }
+}
+/* ============================================= CUSTOM SCROLLBAR ============================================= */

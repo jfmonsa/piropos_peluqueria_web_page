@@ -1,0 +1,10 @@
+/* Style for the table that index all the articles */
+.table__td--btnContainer {
+   width: 16ch;
+}
+/* Style for the table that index all the articles */
+/* Estilos para dar estilos al panel de control desde donde se edita cualquier archivo */
+.txtWp {
+   margin-top: var(--space-between-inputs);
+}
+/* Estilos para dar estilos al panel de control desde donde se edita cualquier archivo */

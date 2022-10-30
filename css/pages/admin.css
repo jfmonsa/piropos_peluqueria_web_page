@@ -1,0 +1,20 @@
+/* Styles for the filter panel */
+.filterContainer {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   margin-bottom: var(--spaceBetween-m__Art__h2-and-content);
+}
+.filterContainer__btnsContainer {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: var(--a-button--padding);
+   place-items: center;
+   place-content: center;
+}
+.filterContainer__btnsContainer .btn {
+   transform: scaleX(-70%) scaleY(-70%) rotate(180deg);
+   margin: 0;
+}
+td.table__td--btnContainer .btn:nth-of-type(1n + 1) {
+   margin-top: var(--space-some-mobile-resize);
+}

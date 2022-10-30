@@ -1,0 +1,53 @@
+/* =========================================== MAIN FOOTER ================================ */
+.main__footer {
+   width: 100vw;
+   min-height: var(--min-footer-height);
+}
+.main__footer__decoration {
+   height: 20px;
+   background-image: url(../../img/footer-st.svg);
+}
+.main__footer__wp {
+   min-height: 240px;
+   background-color: var(--bg-footer);
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+footer li {
+   list-style: none;
+   display: block;
+   color: var(--luminus-dark);
+   font-weight: 300;
+   font-size: 16px;
+}
+.main__footer--sm,
+.main__footer--menu,
+.main__footer--comunidad,
+.main__footer--compositefour {
+   margin: var(--general-padding);
+   width: 136px;
+}
+.main___footer__item--h3,
+.main__footer--compositefour {
+   font-size: 1.17em;
+   display: inline-block;
+   margin-bottom: 8px;
+}
+.fab {
+   font-size: 32px;
+   display: inline-block;
+   margin-top: 8px;
+   background-color: var(--luminus-white);
+   line-height: 28px;
+   border-radius: 8px;
+}
+.fa-whatsapp-square {
+   color: #25d366;
+   margin-left: 16px;
+}
+.fa-facebook-square {
+   color: #4267b2;
+   margin-right: 16px;
+}
+/* ======================================================================================== */

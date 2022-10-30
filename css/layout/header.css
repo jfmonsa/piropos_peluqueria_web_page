@@ -1,0 +1,191 @@
+/* ============================ HEADER ========================================= */
+#btn-menu-chk {
+   display: none;
+}
+/* Header container */
+header {
+   background-color: var(--main-color);
+   width: 100vw;
+   height: var(--header-height);
+   display: flex;
+   align-items: center;
+   position: sticky;
+   top: 0;
+   z-index: 30;
+}
+/* logo */
+:is(img[class*="logo__img"], .one, .two, .logo__title, .icon)::selection,
+.icon {
+   cursor: pointer;
+   background-color: transparent;
+}
+.logo__title {
+   text-align: center;
+   line-height: 20px;
+   font-weight: 800;
+}
+.one {
+   font-size: 16px;
+}
+.two {
+   font-size: 30px;
+}
+.top {
+   margin-bottom: 4px;
+}
+/* .bottom {
+   margin-top: 4px;
+} */
+.logo {
+   display: flex;
+   align-items: center;
+   transition: all 0.25s;
+}
+.logo__wp,
+.logo__title {
+   display: inline-block;
+   margin-left: var(--general-padding);
+}
+.logo__img {
+   display: block;
+}
+/* Animations */
+.logo:hover .logo__title {
+   transform: scale(1.2);
+}
+.logo:hover .bottom {
+   transform: translateY(2px) rotate(15deg);
+   -webkit-transform: translateY(2px) rotate(15deg);
+   -moz-transform: translateY(2px) rotate(15deg);
+   -ms-transform: translateY(2px) rotate(15deg);
+   -o-transform: translateY(2px) rotate(15deg);
+}
+.logo:hover .top {
+   transform: translateY(-2px) rotate(-15deg);
+   -webkit-transform: translateY(-2px) rotate(-15deg);
+   -moz-transform: translateY(-2px) rotate(-15deg);
+   -ms-transform: translateY(-2px) rotate(-15deg);
+   -o-transform: translateY(-2px) rotate(-15deg);
+}
+.menu__item {
+   transition: all 0.2s;
+}
+@media screen and (max-width: 1390px) {
+   /* Mobile */
+   /* burguer icon */
+   .icon,
+   .icon::selection {
+      font-variation-settings: "TIME" 1;
+      transition: font-variation-settings 0.5s ease;
+   }
+   .btn-menu {
+      display: block;
+      position: fixed;
+      z-index: 40;
+      right: var(--general-padding);
+      top: 24px;
+      font-size: 64px;
+   }
+   /* Menu */
+   .menu {
+      position: sticky;
+      z-index: 30;
+      top: 120px;
+      right: -100vw;
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      background: var(--main-color);
+      transition: right 0.4s ease;
+      border: 1px solid var(--rare-items-color);
+      display: none;
+   }
+   .menu > h2 {
+      height: 64px;
+   }
+   :is(.menu, header) :any-link {
+      color: var(--luminus-white);
+   }
+   .menu > h2:hover {
+      background-color: var(--bg-hover);
+   }
+   .menu__item {
+      font-size: 26px;
+      font-weight: bold;
+      text-align: left;
+      display: inline-block;
+      padding: 16px 32px;
+      width: 100%;
+   }
+   .blog__description {
+      margin: 16px 40px;
+      font-size: 16px;
+      font-weight: 300;
+   }
+   .menu__hr {
+      background-color: var(--rare-items-color);
+      height: 1px;
+      width: 100%;
+   }
+   /* cheked */
+   #btn-menu-chk:checked ~ .menu {
+      display: block;
+      right: 0;
+   }
+   #btn-menu-chk:checked ~ .btn-menu {
+      font-variation-settings: "TIME" 100;
+   }
+
+   /* Articles */
+}
+@media screen and (max-width: 500px) {
+   header:not(#btn-menu-chk:checked ~ header) {
+      position: relative;
+   }
+   .btn-menu:not(#btn-menu-chk:checked ~ .btn-menu) {
+      position: absolute;
+   }
+}
+@media screen and (min-width: 1390px) {
+   /* Desktop */
+   /* header & menu */
+   .icon {
+      display: none;
+   }
+   .menu {
+      display: flex;
+      align-items: baseline;
+      z-index: 50;
+      position: fixed;
+      right: var(--general-padding);
+      top: 40px;
+   }
+   .blog__description {
+      display: none;
+   }
+   .menu__item {
+      margin: 0 4px;
+      padding: 0 16px;
+      display: inline-flex;
+      align-self: center;
+      border-radius: 8px;
+      background-color: var(--luminus-white);
+      border: solid 1px var(--border-pop-up);
+      color: var(--border-pop-up);
+      transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+   }
+   .menu__item:hover,
+   .opinion,
+   .blog {
+      background-color: var(--border-pop-up);
+      border-color: var(--luminus-white);
+      color: var(--luminus-white);
+   }
+   :is(.opinion, .blog):hover {
+      background-color: var(--luminus-white);
+      color: var(--border-pop-up);
+      border-color: var(--border-pop-up);
+   }
+   /* Desktop */
+}
+/* ========================================== Menu ======================================== */

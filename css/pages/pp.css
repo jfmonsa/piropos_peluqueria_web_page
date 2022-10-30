@@ -1,0 +1,11 @@
+.timeStamp {
+   font-family: var(--merry-ffamily);
+   font-size: 18px;
+   color: var(--rare-items-color);
+   margin: auto;
+   text-align: center;
+}
+.paragraphContainer {
+   margin: 0 auto var(--spaceBetween-m__Art__h2-and-content) auto;
+   width: 72ch;
+}

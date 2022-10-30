@@ -1,0 +1,34 @@
+FONTS
+Nunito to the titles
+Merrywriter to the text
+anicons to the icons
+an also google fonts material icons and font awesome
+
+
+Files
+./ 
+index.php
+    Archivo que contiene la mayoria o todas las paginas del sitio web, las paginas seran mostradas dinamicamente mediante condicionales
+    enviando por el metodo get la variable page="" con la pagina que se quiere acceder al sitio, cada pagina estara encapsulada
+    en una funcion y sera llamada con condicionales si una persona va a unas page="" o otra
+footer.php
+    footer page
+metatags.php
+    the metatags of the page ecapsuled in a function that is explaine there
+header.php 
+    header page and principal 
+saveData.php
+    this file validate the data from de form
+.ico & .png files (favicons)
+carpetas
+--css
+    |_base
+        |__basicDocuments --> General styles for the common elements
+        |__fallbacks.css --> dont have a use yet
+        |__normalize.css --> The normalize document, without changes
+--js
+    |__all js Files
+--img
+    |__all images except the favicons
+--doc
+    |__documentation

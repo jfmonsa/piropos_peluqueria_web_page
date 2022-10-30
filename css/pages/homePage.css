@@ -1,0 +1,87 @@
+/* -----------------------Services---------------------------------------------------- */
+/* img & animations:hover */
+.m-services .flex-3-col__img:hover {
+   border-radius: 40%;
+}
+/* -----------------------Services---------------------------------------------------- */
+/* ----------------------- why ------------------------------------------------------- */
+.m__Art--why__top {
+   font-family: "Nunito", sans-serif;
+   font-size: clamp(64px, 10vmax, 96px);
+   font-weight: bold;
+   display: block;
+}
+/* ----------------------- why ------------------------------------------------------- */
+/* ----------------------- people ------------------------------------------------------- */
+.m-people .g-2col img {
+   width: 100%;
+   border-radius: 8%;
+   margin-bottom: var(--space-some-mobile-resize);
+   display: block;
+}
+.m-people .g-2col img:hover {
+   border-radius: 4%;
+}
+.m-people .g-2col--cell p:not(:last-of-type) {
+   margin-bottom: var(--space-some-mobile-resize);
+}
+
+/* ----------------------- people ------------------------------------------------------- */
+/* ----------------------- Schedule & cell phone ------------------------------------------------------- */
+.m-schedule p {
+   text-align: center;
+   font-family: "Nunito", sans-serif;
+   --m-schedule--p-f-size: 1.4em;
+   --m-schedule--p3-f-size: 1.425em;
+}
+.m-schedule__p1 {
+   color: var(--rare-items-color);
+   font-weight: 600;
+   font-size: var(--m-schedule--p-f-size);
+}
+.left .m-schedule__p1 {
+   padding-bottom: 8px;
+}
+.m-schedule__p2 {
+   font-size: var(--m-schedule--p-f-size);
+}
+.m-schedule__p3 {
+   margin-top: var(--a-button--space-and-content);
+   font-weight: 700;
+   font-size: var(--m-schedule--p3-f-size);
+}
+.m-schedule__p3__sp {
+   display: block;
+}
+.sp-bottom {
+   margin-top: 8px;
+}
+/* ----------------------- Schedule & cell phone ------------------------------------------------------- */
+/* ----------------------- form ------------------------------------------------------- */
+/* form layout */
+/*grid two colums and inner width two columns
+ 
+ Se dividen los valores originales de la grid a la mitad por que tenemos un grid dentro de
+ otro grid */
+.m-form .g-2col .g-2col {
+   grid-template-columns: repeat(
+      auto-fit,
+      minmax(calc(var(--g-2col--min-column-width) / 2 - var(--g-2col--gap) / 4), 1fr)
+   );
+   column-gap: calc(var(--g-2col--gap) / 2);
+}
+@media screen and (max-width: 598px) {
+   .m-form .g-2col .g-2col {
+      column-gap: calc(var(--g-2col--gap) / 4);
+   }
+   .m-form .g-2col .g-2col .g-2col--cell {
+      width: calc(var(--g-2col--min-column-width) / 2);
+   }
+}
+/* Checkboxes */
+@media screen and (min-width: 598px) {
+   .chkWp {
+      margin-left: 16px;
+   }
+}
+/* Checkboxes */

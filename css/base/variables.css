@@ -1,0 +1,81 @@
+/*
+DESCRIPTION
+this file cotains all the custom properties for general purpouse in all the page of the website
+*/
+:root {
+   /* General ------ */
+   --p-f-size: 1em;
+   --card-and-dialog-padding: 24px;
+   --nunito-ffamily: "Nunito", sans-serif;
+   --merry-ffamily: "Merriweather", serif;
+   --anicons-ffamily: "Anicons Regular", sans-serif;
+   /*====================================== COLORS ===========================================*/
+   --main-color: #851472;
+   /* -----bg color for tables -------- */
+   --main-color-alpha: rgba(133, 20, 114, 0.8); /*For table headers*/
+   --main-color-min-alpha: rgba(133, 20, 114, 0.3); /* For nth-of-type(2n)*/
+   --main-color-min-alpha-h: rgba(133, 20, 114, 0.4);
+   /* -----bg color for tables -------- */
+   --border-pop-up: #5b0058;
+   --bg-footer: #330031;
+   --bg-chkbox-cheked: #b41daf;
+   --bg-body: ghostwhite;
+   --luminus-white: #fff;
+   --luminus-dark: #ebebeb; /*same as --navbar-and-database_hover*/
+   --bg-card: #f9f9f9;
+   --rare-items-color: #554d56; /*same as --scroll-placeholder-captions*/
+   --bg-bayond-scroll: #707070;
+   --text-and-btn: #130912;
+   --bg-hover: rgba(0, 0, 0, 0.3);
+   --warning: #f7921e;
+   --error: #a80000;
+   --ok: #00a216;
+   /*====================================== COLORS ===========================================*/
+   /*====================================== LAYOUT ===========================================*/
+   --general-padding: 24px;
+   --general-border-size: 3px;
+   --header-height: 120px;
+   --min-footer-height: 260px;
+   --subheader-height: 32px;
+   --total-header-height: calc(var(--header-height) + var(--subheader-height));
+
+   --spaceBetween-m__Art: 16vmax;
+   --spaceBetween-m__Art__h2-and-content: 8vmax;
+   --spaceBetween-m__Art__h3-and-content: 2vmax;
+   --space-some-mobile-resize: 16px;
+   --a-button--padding: 16px;
+   --a-button--space-and-content: 4vmax;
+   --width-flex-3-col-img: 16vmax;
+
+   /*====================================== LAYOUT ===========================================*/
+   /*====================================== COMPONENTS ===========================================*/
+   /*--------- ----------- buttons */
+   --button-padding: 16px;
+   --button-f-size: 18px;
+   --btn-time-transition: 0.2s;
+   /* buttons */
+   /*--------- ----------- buttons */
+   /*--------- ----------- forms */
+   --chk-height: 28px;
+   --field-f-size: 16px;
+   --input-height: 40px;
+   --field-radius: 24px;
+   --field-border: var(--general-border-size) solid var(--bg-bayond-scroll);
+   --field-f-family: "Nunito", sans-serif;
+   --field-margin: auto;
+   --space-between-inputs: 32px;
+   --field-max-width: 300px;
+   --field-width: 100%;
+   --field-transition: all 0.2s;
+   --label-padding-f: 0 3px;
+   /* The bellow vars apply to text and select fields */
+   /* ----position of the label into a input wrapper */
+   --input-margin: 0 16px;
+   --label-position-top-i: 8px; /*initial position*/
+   --label-position-top-f: -12px; /*final position*/
+   --label-f-size-f: 14px;
+   --label-bg-f: linear-gradient(to bottom, var(--bg-body), var(--luminus-white));
+   /* ----font size of the label when the input is filled */
+   /*--------- ----------- forms */
+   /*====================================== COMPONENTS ===========================================*/
+}

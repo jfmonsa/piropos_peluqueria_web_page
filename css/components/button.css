@@ -1,0 +1,73 @@
+/* ---------- a buttons & call to actions -----------------------*/
+.btn {
+   width: max-content;
+   height: 48px;
+   margin: var(--a-button--space-and-content) auto 0 auto;
+   padding: 0 var(--button-padding);
+   border-radius: 24px;
+   font-family: "Nunito", sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: var(--button-f-size);
+   font-weight: 600;
+   color: var(--luminus-white);
+   cursor: pointer;
+   appearance: none;
+   border: none;
+}
+/* button animations*/
+.btn:hover {
+   /* the width must be reasigned with the same value or other, this is for the animation
+    funtionally */
+   width: max-content;
+   border: var(--general-border-size) solid var(--border-pop-up);
+   background-color: var(--luminus-white);
+}
+/*Animacion accordign to the btn type*/
+.btn--normal {
+   background-color: var(--text-and-btn);
+}
+.btn--callToAction {
+   background-color: var(--border-pop-up);
+}
+.btn--normal:hover {
+   color: var(--text-and-btn);
+   border-color: var(--text-and-btn);
+}
+.btn--callToAction:hover {
+   color: var(--border-pop-up);
+}
+.btn--ok {
+   background-color: var(--ok);
+}
+.btn--ok:hover {
+   color: var(--ok);
+   border-color: var(--ok);
+}
+.btn--error {
+   background-color: var(--error);
+}
+.btn--error:hover {
+   color: var(--error);
+   border-color: var(--error);
+}
+/*Animacion accordign to the btn type*/
+.btn,
+.btn span {
+   transition: all var(--btn-time-transition);
+}
+.btn--hoverContent {
+   opacity: 0;
+   font-size: 0;
+}
+.btn:hover .btn--hoverContent {
+   opacity: 1;
+   font-size: var(--button-f-size);
+}
+.btn:hover .btn--normalContent {
+   font-size: 0;
+   opacity: 0;
+}
+
+/* ---------- a buttons & call to actions -----------------------*/

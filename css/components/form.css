@@ -1,0 +1,212 @@
+/* ---------------------------- form components basic styles ----------------------------- */
+/*
+Classes naming
+   Evry input with a label MUST be encapsule in a div container>
+
+   --the checkbox container must be have the class="chkWp"
+   <div calss="chkWp">
+      <input type="checkbox" id="" name="" value=">
+      <label for=""> Corte </label>
+   </div>
+
+   --the text field container must be have the class="inputWp"
+   <div class="inputWp">
+      <input type="text" id="" name="" value="">
+      <label for=""> Corte </label>
+   </div>
+
+   --the select container must be have the class="inputWp"
+   Note: The Html markup of this component must be revised
+   <div class="slctWp">
+      <label for="freedays">Dia</label>
+      <input id="select-arrow" type="checkbox">
+      <label for="select-arrow"><i class="fas fa-chevron-down"></i></label>
+      <select id="freedays" required>
+      <option value="1 enero">1 enero</option>
+      <option value="2 enero">2 enero</option>
+      <option value="3 enero">3 enero</option>
+      <option value="1 enero">1 enero</option>
+      </select>
+   </div>
+   */
+
+.inputWp,
+.chkWp,
+.slctWp,
+.txtWp {
+   /* General styles for all inputs wrappers */
+   margin: var(--field-margin);
+   margin-bottom: var(--space-between-inputs);
+   width: var(--field-width);
+   /*font*/
+   font-family: var(--field-f-family);
+   font-size: var(--field-f-size);
+   color: var(--text-and-btn);
+}
+.inputWp,
+.slctWp,
+.chkWp input[type="checkbox"],
+.txtWp {
+   transition: var(--field-transition);
+   background-color: var(--luminus-white);
+   border: var(--field-border);
+}
+/* .slctWp select, */
+.inputWp,
+.slctWp {
+   /* General styles to text fields and selects */
+   height: var(--input-height);
+   position: relative;
+   max-width: var(--field-max-width);
+}
+.inputWp input,
+.inputWp,
+.slctWp,
+.txtWp {
+   border-radius: var(--field-radius);
+}
+.inputWp input,
+.slctWp select,
+.txtWp textarea {
+   width: 100%;
+   height: 100%;
+   padding: var(--input-margin);
+   background: transparent;
+   /* reset default styles */
+   outline: none;
+   border: none;
+}
+:is(.inputWp, .txtWp) label {
+   pointer-events: none;
+}
+:is(input, .txtWp textarea)::placeholder {
+   color: transparent !important;
+}
+:is(.inputWp, .txtWp, .slctWp) label {
+   border-radius: var(--field-radius);
+   margin: var(--input-margin);
+}
+/*               00000000000000000000  General animations 0000000000000000000*/
+:is(.inputWp, .slctWp):is(:focus-within, :hover) {
+   color: var(--main-color);
+}
+:is(.inputWp, .slctWp, .txtWp):is(:hover, :focus-within),
+.chkWp [type="checkbox"]:is(:hover, :focus-within, :checked) {
+   border-color: var(--main-color);
+}
+/*                00000000000000000000  General animations 0000000000000000000*/
+/*                00000000000000000000  checkboxes  0000000000000000000*/
+.chkWp [type="checkbox"] {
+   appearance: none;
+   cursor: pointer;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: var(--chk-height);
+   height: var(--chk-height);
+   border-radius: 4px;
+   margin-right: 8px;
+}
+.chkWp [type="checkbox"]:is(:focus-within, :hover, :checked) {
+   border-color: var(--main-color);
+}
+.chkWp [type="checkbox"]::after {
+   content: "\f00c";
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   font-size: 14px;
+   color: var(--luminus-white);
+}
+.chkWp [type="checkbox"]:checked {
+   background-color: var(--bg-chkbox-cheked);
+}
+/*                00000000000000000000  checkboxes 0000000000000000000*/
+/*                00000000000000000000  text fields 0000000000000000000*/
+.inputWp,
+.inputWp label {
+   cursor: text;
+}
+
+:is(.txtWp, .inputWp) :is(label, input) {
+   position: absolute;
+   left: 0;
+}
+/* Animation */
+.inputWp label {
+   top: var(--label-position-top-i);
+}
+.inputWp input:not(:placeholder-shown) ~ label,
+.inputWp:focus-within label,
+.txtWp textarea:not(:placeholder-shown) ~ label,
+.txtWp:focus-within label {
+   transition: var(--field-transition);
+   margin: var(--input-margin);
+   background: var(--label-bg-f);
+   font-size: var(--label-f-size-f);
+   top: var(--label-position-top-f);
+   padding: var(--label-padding-f);
+}
+/*                00000000000000000000 select fields 0000000000000000000*/
+.slctWp select {
+   cursor: pointer;
+   appearance: none;
+}
+.slctWp label {
+   background: var(--label-bg-f);
+   font-size: var(--label-f-size-f);
+   position: absolute;
+   top: var(--label-position-top-f);
+   padding: var(--label-padding-f);
+}
+.slctWp::after {
+   /* Custom buttom arrow */
+   content: "\f078";
+   font-family: "Font Awesome 5 Free";
+   font-size: 90%;
+   font-weight: 900;
+   width: 20px;
+   height: 20px;
+   background-color: lightgray;
+   position: absolute;
+   top: var(--label-position-top-i);
+   right: 16px;
+   border-radius: 50%;
+   pointer-events: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: var(--field-transition);
+}
+.slctWp:is(:focus-within, :hover)::after {
+   color: var(--luminus-white);
+   background-color: var(--bg-chkbox-cheked);
+}
+.slctWp:is(:hover, :focus-within) {
+   border-end-end-radius: 0;
+   border-end-start-radius: 0;
+}
+/*               00000000000000000000  select fields 0000000000000000000*/
+/*               00000000000000000000  TEXT AREA 0000000000000000000*/
+textarea {
+   resize: none;
+   padding: 16px;
+}
+.txtWp {
+   position: relative;
+   top: var(--label-position-top-i);
+   padding-top: 8px;
+}
+.txtWp label {
+   position: absolute;
+   left: 0;
+}
+.txtWp:is(:focus-within, :hover) label {
+   color: var(--main-color);
+}
+/*               00000000000000000000  TEXT AREA 0000000000000000000*/
+/*              000000000000000000000  file 000000000000 */
+input[type="file"] {
+   display: none;
+}
+/*              000000000000000000000  file 000000000000 */
+/* ---------------------------- form components basic styles ----------------------------- */

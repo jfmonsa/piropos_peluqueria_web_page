@@ -1,0 +1,172 @@
+/* ================================ Fallbaks ============================================= */
+/* Custom properties */
+@supports not (--foo: green) {
+   /*  --main-color: #851472;
+       --border-pop-up: #5b0058;
+       --bg-footer: #330031;
+       --luminus-white: #fff;
+       --luminus-dark: #ebebeb;  /*same as --navbar-and-database_hover
+       --bg-card:#f9f9f9;
+       --rare-items-color: #554d56; /*same as --scroll-placeholder-captions
+       --bg-bayond-scroll:#707070;
+       --text-and-btn:#130912;
+       --warning:#f7921e;
+       --error:#a80000;
+       --ok:#00a216;  */
+
+   /*main components*/
+   header,
+   nav,
+   .menu {
+      background-color: #851472; /*--main-color*/
+   }
+   .menu {
+      border-color: #554d56;
+   }
+   .main__footer__wp {
+      background-color: #330031; /*--bg-footer*/
+   }
+
+   /* links */
+   footer a,
+   header a,
+   nav a,
+   footer,
+   header,
+   nav {
+      color: #fff; /*--luminus-white*/
+   }
+   a:hover,
+   .icon,
+   footer li {
+      color: #ebebeb; /*--luminus-dark*/
+   }
+   .menu__hr {
+      background-color: #554d56;
+   }
+   @media screen and (min-width: 1390px) {
+      /*Desktop menu-header buttons */
+      .menu__item {
+         background-color: #fff;
+         border-color: #5b0058;
+         color: #5b0058;
+      }
+      .menu__item:hover,
+      .opinion,
+      .blog {
+         background-color: #5b0058;
+         border-color: #fff;
+         color: #fff;
+      }
+      .opinion:hover,
+      .blog:hover {
+         background-color: #fff;
+         border-color: #5b0058;
+         color: #5b0058;
+      }
+   }
+}
+/* Custom properties */
+
+/* display grid */
+@supports not (display: grid) {
+   .main__footer__wp {
+      display: flex;
+   }
+}
+/* display grid */
+
+/* pseudo-clases and other properties */
+@supports not
+   selector(
+      :any-link,
+      :not()
+   ) {
+   /* Normalize */
+   * {
+      max-width: 100vw;
+   }
+   table {
+      max-width: initial;
+   }
+   /* links */
+   nav a,
+   header a,
+   footer a {
+      text-decoration: none;
+   }
+   footer a:hover {
+      text-decoration: underline;
+   }
+   footer a,
+   header a,
+   nav a,
+   nav,
+   header,
+   .main__footer,
+   .icon {
+      color: var(--luminus-white);
+   }
+   a:hover,
+   .icon:hover {
+      color: var(--luminus-dark);
+      cursor: pointer;
+   }
+   body a:visited,
+   body a:link,
+   .icon {
+      text-decoration: none;
+   }
+   main p a,
+   footer :link:hover,
+   footer :visited:hover {
+      text-decoration: underline;
+   }
+   /* header */
+   img[class*="logo__img"]::selection,
+   .one::selection,
+   .two::selection,
+   .logo__title::selection,
+   .icon::selection,
+   .icon {
+      cursor: pointer;
+      background-color: transparent;
+   }
+   @media screen and (min-width: 1390px) {
+      /*Desktop menu-header buttons */
+      .opinion:hover,
+      .blog:hover {
+         color: var(--border-pop-up);
+         background-color: var(--luminus-white);
+         border-color: var(--border-pop-up);
+      }
+   }
+}
+/* FOR LAYOUT 2 COL MODE --> fallback for grid
+
+--Use the .flex-2-col flex container
+--Use the .flex-2-col__col-n, for the flex items, where n is the number of the column*/
+/* main flex container layout of the article */
+.flex-2-col {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+}
+.flex-2-col .left {
+   margin-right: 20vw;
+}
+.flex-2-col__col {
+   width: calc(50% - 10vw);
+   min-width: 274px;
+}
+@media screen and (max-width: 936px) {
+   .flex-2-col .left {
+      margin-right: 10vw;
+   }
+}
+@media screen and (max-width: 878px) {
+   .flex-2-col .left {
+      margin: 0 calc((100% - 274px) / 2) 16px;
+   }
+}
+/* ======================================= FALLBACKS ===================================== */

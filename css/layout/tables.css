@@ -1,0 +1,83 @@
+/* 
+This layout structure isn't general, for that to use you need to include in the metatags of the page
+that we need to apply this structure
+
+
+    Basic HTML structure
+        <div class="table__container">
+            <table>
+                <thead>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr><tr>
+                    <td class="table__td--btnContainer">
+                </tbody>
+            </table>
+        </div>
+*/
+
+.table__container {
+   overflow-x: auto;
+}
+table {
+   border-spacing: 0;
+   border: var(--general-border-size) solid var(--text-and-btn);
+   border-radius: var(--field-radius);
+   text-align: center;
+   width: 100%;
+   --initial-padding-td: 1em;
+}
+th,
+td {
+   padding: var(--initial-padding-td);
+   font-family: "Nunito", "sans-serif";
+}
+th {
+   background-color: var(--main-color-alpha);
+   color: var(--luminus-white);
+}
+td {
+   color: var(--text-and-btn);
+}
+/* custom colors--------- */
+tr:nth-of-type(2n + 1) {
+   background-color: var(--main-color-min-alpha);
+}
+tr:nth-of-type(2n + 1):hover {
+   background-color: var(--main-color-min-alpha-h);
+}
+tr:not(:nth-of-type(2n + 1)) {
+   background-color: var(--bg-body);
+}
+tr:not(:nth-of-type(2n + 1)):hover {
+   background-color: var(--luminus-white);
+}
+/* custom colors--------- */
+/* border ------------- */
+th:first-of-type {
+   border-top-left-radius: var(--field-radius);
+}
+th:last-of-type {
+   border-top-right-radius: var(--field-radius);
+}
+tr:last-of-type td:first-of-type {
+   border-bottom-left-radius: var(--field-radius);
+}
+tr:last-of-type td:last-of-type {
+   border-bottom-right-radius: var(--field-radius);
+}
+/* border ------------- */
+/*Centering the btn */
+.table__td--btnContainer {
+   padding: calc(var(--a-button--space-and-content) / 2) var(--initial-padding-td);
+   min-width: max-content;
+   /*Este valor es solamente inicial por favor modificalrlo para que cuanod se le haga hover al boton
+   al agrandarse no se desmaquete, la medida debe ser inicialmente en unidades (ch) hasta que nos se 
+   desmaquete
+*/
+}
+.table__td--btnContainer .btn {
+   margin: 0 auto;
+}

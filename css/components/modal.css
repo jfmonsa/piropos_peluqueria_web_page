@@ -1,0 +1,33 @@
+/* -------------------------- Modal boxes ---------------------------------------------*/
+dialog {
+   border: var(--general-border-size) solid var(--border-pop-up);
+   border-radius: var(--field-radius);
+   background-color: var(--luminus-white);
+   /* The box shadow propertiw works like a backdrop */
+   box-shadow: 0 0 0 1000vmax var(--bg-hover);
+   padding: var(--card-and-dialog-padding) !important;
+   /*The !important must be set to reset the values of the ua stylesheet*/
+   position: fixed;
+   top: calc(var(--total-header-height) + 2vmax);
+   margin: 0 auto;
+   max-width: 50vmax;
+   z-index: 100;
+}
+@media screen and (max-width: 500px) {
+   dialog {
+      position: absolute;
+      max-width: 80vw;
+   }
+}
+dialog p {
+   font-variant-numeric: lining-nums;
+}
+/* Terminar de registrarse en jovenes en accion */
+.d__h2:is(:first-of-type, :last-child) {
+   margin: 16px auto;
+}
+.d__flatBtnContainer {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+}
+/* -------------------------- Modal boxes ---------------------------------------------*/

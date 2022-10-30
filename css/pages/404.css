@@ -1,0 +1,6 @@
+*:not(table, dialog) {
+   max-width: 100vw;
+}
+.d {
+   position: sticky;
+}

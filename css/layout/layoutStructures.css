@@ -1,0 +1,126 @@
+/* ------------------------ ARTICLES --------------------------------------- */
+body {
+   display: flex;
+   flex-direction: column;
+   overflow-x: hidden;
+}
+@media screen and (min-width: 700px) {
+   *:not(table, dialog),
+   html {
+      max-width: calc(100vw - 8px);
+   }
+   /* Para que no se desmaquete en desktop cuando aparece la barra de scroll que mide 16 px
+   Cuando se tengan conocimiento en javascript, hacer esto para todos y no cuando tengamos
+   un navegador mobile */
+}
+.m {
+   min-height: calc(100vh - (var(--min-footer-height)));
+   padding: var(--spaceBetween-m__Art) var(--general-padding);
+}
+.m__Art:not(:last-of-type) {
+   margin-bottom: var(--spaceBetween-m__Art);
+}
+.m__Art__h2,
+.m__Art__h3 {
+   text-align: center;
+}
+.m__Art__h2 {
+   font-size: 28px;
+   font-weight: bold;
+   margin-bottom: var(--spaceBetween-m__Art__h2-and-content);
+   color: var(--text-and-btn);
+}
+.m__Art__h3 {
+   color: var(--rare-items-color);
+   padding-bottom: var(--spaceBetween-m__Art__h3-and-content);
+}
+/* images animations */
+article img {
+   transition: border-radius 0.3s;
+}
+/* ========================== ADICIONAL CAPTIONS FOR FORMS ====================== */
+.m-form .m__Art__h3 {
+   text-align: left;
+}
+.m-form h3,
+.m-schedule__p3 {
+   text-align: center;
+}
+.m-form__p3 {
+   font-size: 24px;
+   font-weight: 600;
+   margin: 0 auto var(--space-some-mobile-resize) auto;
+}
+/* ========================== ADICIONAL CAPTIONS FOR FORMS ====================== */
+
+/* ------------------------ ARTICLES --------------------------------------- */
+/* ------------------------ LAYOUT STRUCTURES --------------------------------------- */
+/* FOR LAYOUT 3 COLUM
+
+--Use the .flex-3-col flex container
+--Use the .flex-3-col__col, for the flex items*/
+/* main flex container layout of the article */
+.flex-3-col {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   flex-basis: min(33.3%, 240px);
+}
+.col-main {
+   margin: 0 var(--space-some-mobile-resize);
+}
+@media screen and (max-width: 817px) {
+   /* Mobile
+   Put the second item in the center whe flex-wrap has effect
+   */
+   .col-main {
+      order: 1;
+      margin-top: var(--space-some-mobile-resize);
+   }
+   .flex-3-col {
+      justify-content: space-evenly;
+   }
+}
+/* main flex items */
+.flex-3-col__col {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   width: clamp(120px, 100% / 3, 240px);
+   text-align: center;
+   min-width: min-content;
+}
+/* 3 col system images */
+.flex-3-col__img {
+   display: block;
+   width: clamp(64px, var(--width-flex-3-col-img), 168px);
+   border-radius: 50%;
+   transition: all 0.2s;
+}
+.flex-3-col__img + p {
+   padding-top: calc(var(--space-some-mobile-resize) / 2);
+}
+/* FOR LAYOUT 2 COL MODE
+
+--Use the .g-2col--cell .g-2col grid container
+--Use the .g-2col__col-col*/
+.g-2col {
+   --g-2col--min-column-width: 274px;
+   --g-2col--gap: 20%;
+   display: grid;
+   grid-template-columns: repeat(
+      auto-fit,
+      minmax(calc(var(--g-2col--min-column-width) - var(--g-2col--gap) / 2), 1fr)
+   );
+   column-gap: var(--g-2col--gap);
+}
+@media screen and (max-width: 598px) {
+   .g-2col--cell {
+      width: var(--g-2col--min-column-width);
+      margin: 0 auto;
+   }
+}
+.flex-3-col__img:hover {
+   filter: grayscale(0.4);
+}
+/* ------------------------ LAYOUT STRUCTURES --------------------------------------- */
