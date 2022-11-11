@@ -1,10 +1,11 @@
-config.php
+#config.php
 index.pug
-./admin/login.php
+#./admin/login.php
 
 #Data base files
-administrador_202107151437.sql
-fechasdisponibles_202108170916.sql
+#administrador_202107151437.sql
+#fechasdisponibles_202108170916.sql
 *.mvwb
 *.bak
 *.pdf
+*.sql
