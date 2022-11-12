@@ -3,6 +3,7 @@ index.pug
 ./admin/login.php
 
 #Data base files
+DatabasesFiles/*
 *.sql
 *.mvwb
 *.bak
