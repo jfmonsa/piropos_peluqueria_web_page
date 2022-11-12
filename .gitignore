@@ -1,5 +1,4 @@
 config.php
-index.pug
 ./admin/login.php
 #Data base files
 DatabasesFiles/*
