@@ -1,13 +1,15 @@
-index.pug
-
 config.php
 index.pug
 ./admin/login.php
 #Data base files
 DatabasesFiles/*
-
 *.sql
 *.mvwb
 *.bak
 *.pdf
 *.sql
+#git related files
+.git-ftp-include
+.git-ftp-ignore
+#useless files
+index.pug
