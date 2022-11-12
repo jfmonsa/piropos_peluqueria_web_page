@@ -138,13 +138,13 @@
                   DATE_FORMAT(id_fecha,"%d/%m/%Y -- %h:%i %p") AS fecha_formateada,
                   id_fecha,
                   DATE_FORMAT(id_fecha,"%w") AS week_day,
-                  (select id_fecha from fechasDisponibles where isdisponible=1 AND id_fecha > NOW() order by id_fecha asc limit 1)
+                  (select id_fecha from fechasDisponibles where isdisponible=1 /*AND id_fecha > NOW() order by id_fecha asc limit 1*/)
                 FROM fechasDisponibles
                 WHERE 
                   isDisponible=1 AND 
                   id_fecha between
-                  (select id_fecha from fechasDisponibles where isdisponible=1 AND id_fecha > NOW() order by id_fecha asc limit 1)
-                  and DATE_ADD((select id_fecha from fechasDisponibles where isdisponible=1 AND id_fecha > NOW() order by id_fecha asc limit 1), INTERVAL 7 DAY)
+                  (select id_fecha from fechasDisponibles where isdisponible=1 /*AND id_fecha > NOW() order by id_fecha asc limit 1*/)
+                  and DATE_ADD((select id_fecha from fechasDisponibles where isdisponible=1 /*AND id_fecha > NOW() order by id_fecha asc limit 1), INTERVAL 7 DAY*/)
                   order by isDisponible  DESC;';
               $result=mysqli_query($cnx,$query);
               while($queryRow=mysqli_fetch_assoc($result)){
