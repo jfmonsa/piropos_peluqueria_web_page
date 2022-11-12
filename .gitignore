@@ -3,8 +3,7 @@ index.pug
 ./admin/login.php
 
 #Data base files
-administrador_202107151437.sql
-fechasdisponibles_202108170916.sql
+*.sql
 *.mvwb
 *.bak
 *.pdf
