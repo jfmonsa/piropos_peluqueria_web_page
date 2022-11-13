@@ -3,7 +3,7 @@ This repo is about a website that I coded when I was 17 years old, at that momen
 
 I developed this project voluntarily (without payment) for a hairdresser located in Tuluá, Colombia (My hometown 😀 ♥), the reason for develop this project was for practicing PHP and SQL.
 
-When I finished this project, I presented it to the piropos hairdresser's owner, but she never used it because she prefers old methods for scheduling appointments with clients, like using a notebook. Then this website is still online but is no longer used, but is still available.
+When I finished this project, I presented it to the Piropos hairdresser's owner, but she never used it because she prefers old methods for scheduling appointments with clients, like using a notebook. Then this website is still online but is no longer used, but is still available.
 
 ## Link
 The website is available in the follow link: http://piropos.great-site.net/
@@ -19,6 +19,6 @@ The website is available in the follow link: http://piropos.great-site.net/
 - section for blogs published by the page
 - Especial features for the page administrator
 
-## More info of piopos hairdresser
+## More info of Piropos hairdresser
 * Instagram: https://www.instagram.com/peluqueriapiropos/
 * advertising spot: https://www.youtube.com/watch?v=0P5731TiiG4
