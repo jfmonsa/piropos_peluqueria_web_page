@@ -8,7 +8,7 @@ When I finished this project, I presented it to the Piropos hairdresser's owner,
 ## Link
 The website is available in the follow link: http://piropos.great-site.net/
 
-## technologies used
+## Technologies used
 - PHP mixed with HTML: in order to made it dynamic.
 - SQL: for the data base.
 - CSS: (Note: it looks better so far in smartphones).
